@@ -1,4 +1,4 @@
-@use '../util' as *;
+@use "../util" as *;
 html {
   font-size: 100%;
   box-sizing: border-box;
@@ -15,40 +15,6 @@ html {
 }
 
 body {
-  margin: 0 0 var(--header-height 0);
-  font-family: var(--body-font);
-  font-size: var(--m-font-size);
-  background-color: var(--body-color);
-  color: var(--text-color);
-  min-height: 100vh;
-}
-
-.visually-hidden {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-
-//section
-.section {
-  padding: 2rem 0 4rem;
+  width: 100vw;
   height: 100vh;
-}
-
-.section__title {
-  font-size: var(--h1-font-size);
-}
-
-.section__subtitle {
-  display: block;
-  font-size: var(--small-font-size);
-  margin-bottom: var(--mb-3);
-}
-
-.section__title,
-.section__subtitle {
-  text-align: center;
 }

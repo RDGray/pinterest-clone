@@ -1,43 +1,30 @@
-@use '../util' as *;
+@use "../util" as *;
 
 :root {
   //Main color
   --hue-color: 215;
-
+  --saturation: 82%;
+  --lightness: 99%;
   //Palette Picker
 
-  --first-color-palette: hsl(215, 69%, 61%);
-  --first-color-second-palette: hsl(215, 69%, 61%);
-  --first-color-second-darken-palette: hsl(216, 68%, 24%);
-  --first-color-alt-palette: hsl(215, 57%, 53%);
-  --first-color-lighter-palette: hsl(215, 92%, 85%);
-  --title-color-palette: hsl(215, 8%, 15%);
-  --text-color-palette: hsl(215, 8%, 45%);
-  --text-color-light-palette: hsl(215, 8%, 65%);
-  --input-color-palette: hsl(215, 70%, 96%);
-  --input-color-darken-palette: hsl(215, 79%, 85%);
-  --scroll-bar-color-pallete: hsl(0, 91%, 23%);
-  --scroll-thumb-color-pallete: hsl(0, 22%, 35%);
-  --body-color-palette: hsl(215, 60%, 99%);
-
-  --container-color-palette: #fff;
-
   //Color variables / Light theme
-  --first-color: hsl(var(--hue-color), 69%, 61%);
-  --first-color-second: hsl(var(--hue-color), 69%, 61%);
-  --first-color-second-darken: hsl(var(--hue-color), 68%, 24%);
-  --first-color-alt: hsl(var(--hue-color), 57%, 53%);
-  --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
-  --title-color: hsl(var(--hue-color), 8%, 15%);
-  --text-color: hsl(var(--hue-color), 8%, 45%);
-  --text-color-light: hsl(var(--hue-color), 8%, 65%);
-  --input-color: hsl(var(--hue-color), 70%, 96%);
-  --input-color-darken: hsl(var(--hue-color), 70%, 90%);
-  --body-color: hsl(var(--hue-color), 10%, 98%);
-  --header-color: hsl(var(--hue-color), 67%, 95%);
+  --primary-clr-300: hsl(215, 82%, 61%);
+  --primary-clr-400: hsl(215, 82%, 51%);
+  --primary-clr-500: hsl(215, 82%, 41%);
+  --primary-clr-600: hsl(215, 82%, 31%);
+
+  --secondary-clr-300: hsl(215, 57%, 53%);
+  --first-color-lighter: hsl(215, 92%, 85%);
+  --title-color: hsl(215, 8%, 15%);
+  --text-color: hsl(215, 8%, 45%);
+  --text-color-light: hsl(215, 8%, 65%);
+  --input-color: hsl(215, 70%, 96%);
+  --input-color-darken: hsl(215, 70%, 90%);
+  --body-color: hsl(215, 10%, 98%);
+  --header-color: hsl(215, 67%, 95%);
   --container-color: #fff;
-  --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
-  --scroll-thumb-color: hsl(var(--hue-color), 37%, 31%);
+  --scroll-bar-color: hsl(215, 12%, 90%);
+  --scroll-thumb-color: hsl(215, 37%, 31%);
 }
 
 body.dark-theme {

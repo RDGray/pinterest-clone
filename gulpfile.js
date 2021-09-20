@@ -7,6 +7,7 @@ const cssnano = require("cssnano");
 const babel = require("gulp-babel");
 const terser = require("gulp-terser");
 const browsersync = require("browser-sync").create();
+var concat = require("gulp-concat");
 
 // Use dart-sass for @use
 //sass.compiler = require("dart-sass");
@@ -22,6 +23,7 @@ function scssTask() {
 // Javascript Task
 function jsTask() {
   return src(["app/js/**/*.js", "app/js/*.js"], { sourcemaps: true })
+    .pipe(concat("all.js"))
     .pipe(babel({ presets: ["@babel/preset-env"] }))
     .pipe(terser())
     .pipe(dest("dist/js", { sourcemaps: "." }));

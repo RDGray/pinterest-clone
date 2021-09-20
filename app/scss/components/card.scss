@@ -1,0 +1,38 @@
+@use "../util/" as *;
+.card {
+  padding: 0;
+  margin: rem(15) rem(10);
+
+  border: 1px solid;
+  border-radius: var(--card-border-radius);
+
+  background-color: transparent;
+
+  &--small {
+    grid-row-end: span var(--card-small);
+  }
+  &--medium {
+    grid-row-end: span var(--card-medium);
+  }
+  &--large {
+    grid-row-end: span var(--card-large);
+  }
+  &__title {
+  }
+  &__modal {
+  }
+  &__head {
+  }
+  &__save {
+  }
+  &__foot {
+  }
+  &__destination {
+  }
+  &__mock-icon-container {
+  }
+  &__card__mock-icon {
+  }
+  &__image {
+  }
+}

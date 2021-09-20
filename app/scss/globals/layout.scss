@@ -1,4 +1,13 @@
-@use '../util' as *;
+@use "../util" as *;
+
+:root {
+  --card-width: 250px;
+  --card-border-radius: 16px;
+  --row-increment: 10px;
+  --card-small: 26;
+  --card-medium: 33;
+  --card-large: 45;
+}
 
 .container {
   padding: 0;
@@ -9,7 +18,4 @@
 .grid {
   display: grid;
   gap: 1.5rem;
-}
-
-body {
 }
