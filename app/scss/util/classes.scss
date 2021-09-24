@@ -27,3 +27,9 @@
 .section__subtitle {
   text-align: center;
 }
+
+.trim-text {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
