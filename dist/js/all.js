@@ -1,2 +1,2 @@
-"use strict";console.log("main");
+"use strict";console.log("main"),document.querySelector("#picture").addEventListener("change",(function(e){if(e.target.files&&e.target.files[0]&&/image\/*/.test(e.target.files[0].type)){var t=new FileReader;t.onload=function(){document.querySelector(".card__image").src=t.result},t.readAsDataURL(e.target.files[0])}document.querySelector("#picture").value=""}));
 //# sourceMappingURL=all.js.map
