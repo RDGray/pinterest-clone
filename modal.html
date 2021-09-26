@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clone Pinterest</title>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/49ab07ec33.js" crossorigin="anonymous"></script> <!-- CSS -->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/dist/css/style.css">
+</head>
+
+<body>
+
+
+    <main class="main">
+        <section class="main__wrapper container">
+
+            <div class="main__pin-nav">
+
+                <div class="main__create main__btn main__btn-active">Create a pin</div>
+                <div class="main__save main__btn">Save from website</div>
+
+            </div>
+        </section>
+
+        <section class="card-container">
+
+            <label for="picture"></label>
+            <input class="main__input" type="file" name="picture" id="picture">
+
+            <section class="add">
+                <!-- header  -->
+                <div class="add__header">
+
+                    <div class="add__edit">
+                        <i class="fas fa-ellipsis-h add__ellipsis"></i>
+                    </div>
+
+                    <div class="add__board">
+
+                        <div class="add__select-board-container">
+                            <select class="add__select-board" id="pin_size" name="pin_size">
+                                <option value="" disabled selected>Usefull Hacks</option>
+                                <option value="" disabled>Nature</option>
+                                <option value="" disabled>Winter</option>
+                            </select>
+                            <i class="fas fa-chevron-down add__arrow-down"></i>
+                        </div>
+                        <!-- <div class="add__select-board"> </div> -->
+                        <button type="button" class="add__save">
+                            <div class="add__save-inner">Save</div>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="side__container">
+                    <!-- left side -->
+                    <section class="left-side" id="left_side">
+
+
+
+                        <label class="left-side__img-label" for="upload_img" id="upload_image_label">
+
+                            <div class="left-side__img-container">
+                                <div class="left-side__dotted-border" id="dotted_border">
+
+                                    <div class="left-side__mock-icon-container">
+                                        <i class="fas fa-arrow-alt-circle-up"></i>
+                                    </div>
+
+                                    <div class="left-side__upload-text">Drag and drop or click to upload</div>
+                                    <div class="left-side__recomend-size">Recommendation: Use high-quality .jpg files
+                                        less
+                                        than
+                                        20MB</div>
+                                </div>
+                            </div>
+                            <input type="file" name="upload_img" id="upload_img">
+                        </label>
+
+                        <div class="left-side__image-container">
+                            <div class="card__image-container">
+                                <!-- <img src="" class="card__image" alt=""> -->
+                            </div>
+                        </div>
+
+                    </section>
+
+                    <!-- right side -->
+                    <div class="right-side" id="right_side">
+
+                        <section class="right-side__add-info">
+                            <input placeholder="Add your title" type="text" id="pin_title">
+
+                            <div class="right-side__user">
+                                <div class="right-side__user-circle">
+                                    <span>G</span>
+                                </div>
+                                <div class="right-side__user-name">
+                                    <span>Gray Gan</span>
+                                </div>
+                            </div>
+
+                            <input placeholder="Tell everyone what's your Pin about" type="text" id="pin_description">
+
+                            <div class="right-side__alt-text-container">
+                                <span class="right-side__alt-text">Add alt text</span>
+                            </div>
+
+                            <input placeholder="Add a destination link" type="text" id="pin_destination">
+
+                        </section>
+
+                    </div>
+                </div>
+            </section>
+
+
+        </section>
+    </main>
+    <!-- JS -->
+    <script src="/dist/js/all.js"></script>
+</body>
+
+</html>

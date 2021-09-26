@@ -18,3 +18,12 @@ body {
   box-sizing: border-box;
   font-family: "Quicksand", sans-serif;
 }
+
+select {
+  border: none;
+  font: inherit;
+  box-sizing: inherit;
+  width: 100%;
+  background-color: inherit;
+  appearance: none;
+}
