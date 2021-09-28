@@ -58,6 +58,8 @@
   &__image-input {
   }
   &__msg {
+    background-color: #fff;
+
     border: 1px solid white;
     width: rem(300);
     position: absolute;
@@ -85,10 +87,12 @@
     display: flex;
     align-items: center;
 
-    font-size: var(--m-font-size);
+    font-size: 14px;
     padding: rem(8) rem(16);
 
     cursor: pointer;
+
+    font-weight: 800;
 
     &:hover {
       background-color: hsl(0, 0%, 93.7%);
