@@ -1,4 +1,4 @@
-@use '../util' as *;
+@use "../util" as *;
 
 :root {
   --header-height: 3rem;
@@ -8,6 +8,8 @@
   --xs-font-size: 0.75rem;
   --s-font-size: 0.813rem;
   --m-font-size: 0.938rem;
+  --ml-font-size: 0.95rem;
+  --sm-font-size: 1.1rem;
   --l-font-size: 2rem;
 
   //Heading Font Size

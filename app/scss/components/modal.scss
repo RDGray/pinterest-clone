@@ -2,12 +2,14 @@
 
 .main {
   background-color: hsl(0, 0%, 94%);
-  height: 100vh;
+  height: 100%;
   position: relative;
+  //padding-bottom: 10rem;
 
   &__wrapper {
     padding: rem(20) 0;
     width: 100%;
+    height: 100%;
   }
   &__pin-nav {
     display: flex;
@@ -45,6 +47,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
 
 .main__input {
@@ -60,7 +63,8 @@
   background-color: #fff;
 
   width: rem(880); //
-  height: rem(700); //
+  min-width: rem(880); //
+  height: rem(650); //
 
   border-radius: rem(16);
 
@@ -113,7 +117,7 @@
 
     padding: 0px rem(10);
 
-    border-radius: 8px 0px 0px 8px;
+    border-radius: rem(8) 0px 0px rem(8);
   }
 
   &__arrow-down {
@@ -139,17 +143,21 @@
 }
 
 .side__container {
-  width: 100%;
-  height: 100%;
   display: flex;
-  padding: 0 rem(20) rem(40);
+
+  width: 100%;
+
+  height: 100%;
+
+  padding: 0 0 rem(40);
 }
 .left-side {
+  flex-shrink: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
-  width: 50%;
+  width: 48%;
   border-radius: rem(8);
 
   padding: 0 rem(20);
@@ -162,6 +170,11 @@
     cursor: pointer;
     background-color: #efefef;
     border-radius: rem(8);
+  }
+  &__input {
+    width: 0;
+    height: 0;
+    opacity: 0;
   }
   &__img-container {
     padding: rem(10);
@@ -181,24 +194,172 @@
     width: 100%;
     height: 100%;
     border-radius: rem(8);
+
+    position: relative;
   }
 
   &__mock-icon-container {
     background-color: transparent;
     color: #767676;
     font-size: 2.1rem;
+    padding: 1.5rem;
   }
+  &__upload-text {
+    text-align: center;
+    padding: 0 3rem;
+  }
+  &__recommend-size {
+    text-align: center;
+
+    position: absolute;
+    bottom: 1.5rem;
+
+    font-size: var(--s-font-size);
+    color: #6c6c6c;
+
+    padding: 0 1.1rem;
+  }
+  //uploaded image
+  &__image-container {
+    max-width: rem(344);
+    max-height: rem(510);
+    display: flex;
+    padding: 0;
+    border-radius: var(--card-border-radius); //
+
+    overflow: hidden;
+
+    display: none;
+    opacity: 0;
+  }
+  &__image-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden !important;
+  }
+
+  .pin_max_width {
+    max-width: 100%;
+  }
+  .pin_max_height {
+    max-height: 100%;
+  }
+  //
 }
 
 .right-side {
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  width: 50%;
+  width: 52%;
+  height: 100%;
 
   padding: 0 rem(20);
 
-  background-color: red;
+  //background-color: red;
+
+  &__add-info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    //justify-content: space-around;
+  }
+
+  &__title,
+  &__description,
+  &__destination {
+    width: 100%;
+    background-color: transparent;
+    outline: none;
+    border-bottom: 1px solid #dadada;
+    white-space: pre-wrap !important;
+    overflow: hidden;
+
+    &:focus {
+      border-bottom: 1px solid hsl(210, 100%, 45.5%);
+    }
+  }
+
+  &__title {
+    font-size: var(--l-font-size);
+    height: rem(65);
+    color: gray;
+    padding-bottom: 2rem;
+    margin-top: rem(32);
+  }
+  &__user {
+    display: flex;
+    margin-top: 2rem;
+  }
+  &__user-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: rem(48);
+    height: rem(48);
+    background-color: #efefef;
+    border-radius: 50%;
+    font-weight: 700;
+    &:hover {
+      background-color: #e6e6e6;
+    }
+  }
+
+  &__user-name {
+    display: flex;
+    align-items: center;
+    padding-left: 0.5rem;
+    font-weight: 700;
+  }
+
+  &__description {
+    height: 2.5rem;
+    margin-top: 1rem;
+    font-size: var(--ml-font-size);
+  }
+  &__alt-text-container {
+    margin-top: 1.5rem;
+    min-width: rem(60);
+    min-height: rem(40);
+
+    width: max-content;
+    display: inline-block;
+
+    background-color: #efefef;
+    border-radius: rem(24);
+
+    cursor: pointer;
+    &:hover {
+      background-color: #e6e6e6;
+    }
+  }
+
+  &__alt-text {
+    font-weight: 700;
+    display: inline-block;
+    padding: rem(8) rem(12);
+
+    text-align: center;
+  }
+  &__destination-container {
+    display: flex;
+    height: 40%;
+  }
+  &__destination {
+    align-self: flex-end;
+    padding-bottom: 0.7rem;
+    font-size: var(--sm-font-size);
+    color: #919090;
+    margin-bottom: 0.5rem;
+  }
 }

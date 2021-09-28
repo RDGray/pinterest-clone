@@ -16,6 +16,83 @@
 
 <body>
 
+    <!-- Add Pin Navigation -->
+    <div class="add-pin__navigation">
+        <button class="add-pin__image-btn" onclick="toggleBotMenu()">
+            <i class=" fas fa-plus add-pin__image-icon"> </i>
+        </button>
+
+        <button class="add-pin__image-btn">
+            <i class="fas fa-question add-pin__image-icon"> </i>
+        </button>
+
+        <input class="add-pin__image-input" type="file" name="picture" id="picture">
+
+        <!--  MSG sector -->
+        <section class="add-pin__msg menuOff">
+            <div class="add-pin__upload-pin-container">
+                <i class="fab fa-pinterest upload__icon"></i>
+                <div class="add-pin__browser"> Get your browser button to save ideas even
+                    faster</div>
+            </div>
+            <hr class="random__hr">
+            <div class="add-pin__upload-pin-container">
+                <i class="fas fa-plus upload__icon"></i>
+                <div class="add-pin__upload-pin"> Create a pin</div>
+            </div>
+        </section>
+    </div>
+
+
+    <section class="pin__container">
+
+        <!-- <div class="card card--large">
+
+            <div class="card__title"></div>
+
+            <div class="modal">
+
+                <div class="modal__head">
+                    <div class="modal__profile"> Profile <i class="fas fa-chevron-down modal__profile-icon"></i></div>
+                    <button type="button" class="modal__save">
+                        <div class="modal__save-inner">Save</div>
+                    </button>
+
+                </div>
+
+                <div class="modal__foot">
+
+                    <div class="modal__destination ">
+
+                        <div class="modal__mock-icon-container trim-text">
+                            <i class="fas fa-chevron-right modal__mock-icon"></i>
+
+                            <div class="modal__mock-text trim-text">eat55t55.555ot55.555o.555orem</div>
+                        </div>
+                    </div>
+
+                    <div class="modal__social">
+
+                        <div class="modal__mock-icon-container">
+                            <i class="far fa-share-square card__mock-icon"></i>
+                        </div>
+
+
+                        <div class="modal__mock-icon-container">
+                            <i class="fas fa-ellipsis-h card__mock-icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card__image-container">
+                <img src="" class="card__image" alt="">
+            </div>
+        </div> -->
+    </section>
+
+
+    <!-- Modal to add -->
 
     <main class="main">
         <section class="main__wrapper container">
@@ -31,7 +108,6 @@
         <section class="card-container">
 
             <label for="picture"></label>
-            <input class="main__input" type="file" name="picture" id="picture">
 
             <section class="add">
                 <!-- header  -->
@@ -75,7 +151,8 @@
                                     </div>
 
                                     <div class="left-side__upload-text">Drag and drop or click to upload</div>
-                                    <div class="left-side__recommend-size">Recommendation: Use high-quality .jpg files
+                                    <div class="left-side__recommend-size">Recommendation: Use high-quality .jpg
+                                        files
                                         less
                                         than
                                         20MB</div>
@@ -130,6 +207,7 @@
 
 
     </main>
+
     <!-- JS -->
     <script src="/dist/js/all.js"></script>
 </body>
