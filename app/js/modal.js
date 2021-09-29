@@ -62,7 +62,4 @@ document.querySelector(".add__save").addEventListener("click", () => {
     img_blob: pin_image_blob,
     pin_size: document.querySelector("#pin_size").value,
   };
-  //create_pin(user_data);
-  console.log(users_data);
 });
-console.log(document.querySelector("#pin_size").value);

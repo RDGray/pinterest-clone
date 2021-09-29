@@ -1,5 +1,6 @@
 @use "../util" as *;
 .main {
+  display: none;
   opacity: 0;
   pointer-events: none;
 

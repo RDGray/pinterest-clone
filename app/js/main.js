@@ -10,3 +10,10 @@ function toggleBotMenu() {
     msg.classList.add("menuOff");
   }
 }
+
+document
+  .querySelector(".add-pin__upload-pin-create")
+  .addEventListener("click", () => {
+    msg.classList.add("menuOff");
+    msg.classList.remove("menuOn");
+  });

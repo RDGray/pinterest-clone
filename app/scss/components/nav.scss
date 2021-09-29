@@ -6,6 +6,8 @@
   min-width: rem(320);
   position: fixed;
   top: 0;
+  z-index: 11111;
+  background-color: white;
 
   &__wrapper {
     display: flex;
