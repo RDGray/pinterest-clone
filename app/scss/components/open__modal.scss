@@ -91,6 +91,53 @@
   }
 
   &__right-side {
+    height: 100%;
     width: 50%;
+    padding: 0 rem(32);
+
+    &-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      margin-right: 0.5rem;
+      border-radius: 50%;
+
+      width: rem(48);
+      height: rem(48);
+
+      cursor: pointer;
+
+      transition: all 0.2s ease-in-out;
+
+      &:hover.open__right-side-icon--hover {
+        background-color: #e2e2e2;
+      }
+      &--link {
+        margin-left: 0.5rem;
+      }
+      &--profile {
+        margin-right: 1rem;
+        font-weight: 800;
+
+        cursor: pointer;
+      }
+    }
+    &-top {
+      display: flex;
+      justify-content: space-between;
+
+      padding-top: rem(32);
+      &-left {
+        display: flex;
+        align-items: center;
+
+        font-size: 1.3rem;
+      }
+      &-right {
+        display: flex;
+        align-items: center;
+      }
+    }
   }
 }
