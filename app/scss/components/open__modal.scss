@@ -1,0 +1,96 @@
+@use "../util/" as *;
+
+.open {
+  position: relative; //
+
+  height: 100%;
+  width: 100%;
+  background-color: white;
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+
+    margin-top: 6rem;
+
+    height: 100%;
+    width: 100%;
+  }
+
+  &__back {
+    align-self: flex-start;
+
+    font-size: 1.3rem;
+  }
+  &__card {
+    height: 100%;
+    width: 100%;
+    max-width: rem(1100);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    align-self: center;
+    margin: 0 1rem;
+    border-radius: rem(32);
+    overflow: hidden;
+  }
+
+  &__card {
+  }
+  &__side-container {
+    display: flex;
+
+    overflow: hidden;
+  }
+  &__left-side {
+    height: 100%;
+    width: 50%;
+    padding: rem(20);
+
+    &-image-wrapper {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    &-image {
+      width: 100%;
+      max-height: rem(600);
+      object-fit: cover;
+      border-radius: rem(32);
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+
+        background-color: gray;
+      }
+    }
+    &-icon {
+      height: 1.5rem;
+      width: 1.5rem;
+
+      &-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: absolute;
+        right: 1.5rem;
+        bottom: 1.5rem;
+
+        height: rem(48);
+        width: rem(48);
+        background-color: #e9eaea;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__right-side {
+    width: 50%;
+  }
+}

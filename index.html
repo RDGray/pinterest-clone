@@ -15,12 +15,249 @@
 </head>
 
 <body>
-    <!-- <div class="pin_add-image-container">
-        <i class="fas fa-plus pin_add-image-icon"> </i>
-        <i class="fas fa-question pin_add-image-icon"> </i>
-        <input class="pin_add-image-input" type="file" name="picture" id="picture">
-    </div> -->
+
+    <!--  Top nav PC -->
+    <nav class="nav">
+        <div class="nav__wrapper">
+            <div class="nav__inner">
+                <div class="nav__left-side">
+                    <div class="nav__logo"> <a href="#"> <i class="fab fa-pinterest"></i></a></div>
+                    <div class="nav__home"><a href="#"> Home</a></div>
+                </div>
+
+                <div class="nav__search">
+                    <i class="fas fa-search nav__search-icon"></i>
+                    <input class="nav__search-inner" type="text" placeholder="Search">
+                </div>
+
+                <div class="nav__right-side">
+                    <div class="nav__socials">
+                        <div class="nav__bell"><i class="fas fa-bell"></i></div>
+                        <div class="nav__communication"><i class="fas fa-comment-dots"></i></div>
+                    </div>
+                    <div class="nav__personal">
+                        <a href="#">
+                            <div class="nav__saved"><span class="nav__saved-inner">S</span></div>
+                        </a>
+                        <div class="nav__account"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menu Account-->
+            <section class="account menuOff" id="account">
+
+                <div class="account__wrapper">
+
+                    <div class="account__top">
+
+                        <div class="account__logged">
+                            <div>Currently in</div>
+                        </div>
+
+                        <div class="account__personal">
+
+                            <div class="account__photo">
+                                <span>G</span>
+                            </div>
+
+                            <div class="account__information">
+                                <div class="account__name">
+                                    <span>Smith A</span>
+                                </div>
+                                <div class="account__type">
+                                    <span>Personal</span>
+                                </div>
+                                <div class="account__mail">
+                                    <span>Example@gmail.com</span>
+                                </div>
+                            </div>
+
+                            <div class="account__verfication"> <i class="fas fa-check"></i></div>
+                        </div>
+
+                    </div>
+
+                    <div class="account__middle">
+
+                        <div class="account__change-heading">
+                            <div>Your Accounts</div>
+                        </div>
+
+                        <div class="account__add">
+                            <span class="account__add-inner">Add account</span>
+                            <span class="account__convert-inner">Convert to business</span>
+                        </div>
+                    </div>
+
+                    <div class="account__bottom">
+                        <div class="account__bottom-heading">
+                            <div>Your Accounts</div>
+                        </div>
+                        <div class="account__options">
+                            <span class="account__option">Settings</span>
+                            <span class="account__option">Tune your home feed</span>
+                            <span class="account__option">Install the Windows app</span>
+                            <span class="account__option">Get help</span>
+                            <span class="account__option">See terms and privacy</span>
+                            <span class="account__option">Log out</span>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+    </nav>
+
+    <!--  Top nav Mobile -->
+
+    <div class="nav__mobile">
+        <div class="nav__mobile--container">
+
+            <div class="nav__mobile--home">
+                <a href="#"><i class="fas fa-home"></i></a>
+            </div>
+
+            <div class="nav__mobile--search">
+                <a href="#"> <i class="fas fa-search"></i></a>
+            </div>
+
+            <div class="nav__mobile--communication">
+                <a href="#"> <i class="fas fa-comment-dots"></i></a>
+            </div>
+
+            <div class="nav__mobile--user">
+                <a href="#"> <i class="fas fa-user"></i></a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Add Pin Navigation -->
+    <div class="add-pin__navigation">
+        <button class="add-pin__image-btn" onclick="toggleBotMenu()">
+            <i class=" fas fa-plus add-pin__image-icon"> </i>
+        </button>
+
+        <button class="add-pin__image-btn">
+            <i class="fas fa-question add-pin__image-icon"> </i>
+        </button>
+
+        <input class="add-pin__image-input" type="file" name="picture" id="picture">
+
+        <!--  MSG sector -->
+        <section class="add-pin__msg menuOff">
+            <div class="add-pin__upload-pin-container">
+                <i class="fab fa-pinterest upload__icon"></i>
+                <div class="add-pin__browser"> Get your browser button to save ideas even
+                    faster</div>
+            </div>
+            <hr class="random__hr">
+            <div class="add-pin__upload-pin-container add-pin__upload-pin-create">
+                <i class="fas fa-plus upload__icon"></i>
+                <div class="add-pin__upload-pin"> Create a pin</div>
+            </div>
+        </section>
+    </div>
+
+
     <section class="pin__container">
+
+        <!-- I example -->
+        <div class="card card--medium">
+
+            <div class="card__title"></div>
+
+            <div style="width: 100%; height: 100%;" class="modal">
+
+                <div class="modal__head">
+                    <div class="modal__profile"> Profile <i class="fas fa-chevron-down modal__profile-icon"></i></div>
+                    <button type="button" class="modal__save">
+                        <div class="modal__save-inner">Save</div>
+                    </button>
+
+                </div>
+
+                <div class="modal__foot">
+
+                    <div class="modal__destination ">
+
+                        <div class="modal__mock-icon-container trim-text">
+                            <i class="fas fa-chevron-right modal__mock-icon"></i>
+
+                            <div class="modal__mock-text trim-text">Lorem ipsum dolor sit amet, consectetur adipisicing
+                                elit. Aliquam, praesentium?</div>
+                        </div>
+                    </div>
+
+                    <div class="modal__social">
+
+                        <div class="modal__mock-icon-container">
+                            <i class="far fa-share-square card__mock-icon"></i>
+                        </div>
+
+
+                        <div class="modal__mock-icon-container">
+                            <i class="fas fa-ellipsis-h card__mock-icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card__image-container">
+                <img src="/dist/img/photo-1420593248178-d88870618ca0.jpg" class="card__image" alt="">
+            </div>
+
+        </div>
+
+        <!-- II example -->
+        <div class="card card--xsmall">
+
+            <div class="card__title"></div>
+
+            <div class="modal">
+
+                <div class="modal__head">
+                    <div class="modal__profile"> Profile <i class="fas fa-chevron-down modal__profile-icon"></i></div>
+                    <button type="button" class="modal__save">
+                        <div class="modal__save-inner">Save</div>
+                    </button>
+
+                </div>
+
+                <div class="modal__foot">
+
+                    <div class="modal__destination ">
+
+                        <div class="modal__mock-icon-container trim-text">
+                            <i class="fas fa-chevron-right modal__mock-icon"></i>
+
+                            <div class="modal__mock-text trim-text">Lorem ipsum dolor sit amet.</div>
+                        </div>
+                    </div>
+
+                    <div class="modal__social">
+
+                        <div class="modal__mock-icon-container">
+                            <i class="far fa-share-square card__mock-icon"></i>
+                        </div>
+
+
+                        <div class="modal__mock-icon-container">
+                            <i class="fas fa-ellipsis-h card__mock-icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card__image-container">
+                <img src="/dist/img/photo-1471879832106-c7ab9e0cee23.jpg" class="card__image" alt="">
+            </div>
+        </div>
+
+        <!-- Example 3 -->
 
         <div class="card card--large">
 
@@ -43,17 +280,18 @@
                         <div class="modal__mock-icon-container trim-text">
                             <i class="fas fa-chevron-right modal__mock-icon"></i>
 
-                            <div class="modal__mock-text trim-text">eat55t55.555ot55.555o.555orem</div>
+                            <div class="modal__mock-text trim-text">Lorem ipsum dolor sit amet consectetur adipisicing.
+                            </div>
                         </div>
                     </div>
 
                     <div class="modal__social">
-                        <!-- below will be a send icon -->
+
                         <div class="modal__mock-icon-container">
                             <i class="far fa-share-square card__mock-icon"></i>
                         </div>
 
-                        <!-- below will be a something else icon -->
+
                         <div class="modal__mock-icon-container">
                             <i class="fas fa-ellipsis-h card__mock-icon"></i>
                         </div>
@@ -62,24 +300,314 @@
             </div>
 
             <div class="card__image-container">
-                <img src="" class="card__image" alt="">
+                <img src="/dist/img/blue-morpho-350x150-matthiasfr-pixabay-crop.jpg" class="card__image" alt="">
             </div>
         </div>
 
 
+        <!-- IV example -->
 
-        <div class="card card--medium"></div>
-        <div class="card card--large"></div>
-        <div class="card card--medium"></div>
-        <div class="card card--large"></div>
-        <div class="card card--medium"></div>
-        <div class="card card--large"></div>
-        <div class="card card--small"></div>
+        <div class="card card--small">
+
+            <div class="card__title"></div>
+
+            <div class="modal">
+
+                <div class="modal__head">
+                    <div class="modal__profile"> Profile <i class="fas fa-chevron-down modal__profile-icon"></i></div>
+                    <button type="button" class="modal__save">
+                        <div class="modal__save-inner">Save</div>
+                    </button>
+
+                </div>
+
+                <div class="modal__foot">
+
+                    <div class="modal__destination ">
+
+                        <div class="modal__mock-icon-container trim-text">
+                            <i class="fas fa-chevron-right modal__mock-icon"></i>
+
+                            <div class="modal__mock-text trim-text">Lorem ipsum dolor sit.</div>
+                        </div>
+                    </div>
+
+                    <div class="modal__social">
+
+                        <div class="modal__mock-icon-container">
+                            <i class="far fa-share-square card__mock-icon"></i>
+                        </div>
 
 
+                        <div class="modal__mock-icon-container">
+                            <i class="fas fa-ellipsis-h card__mock-icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-        <!-- JS -->
-        <script src="/dist/js/all.js"></script>
+            <div class="card__image-container">
+                <img src="/dist/img/personal4.jpg" class="card__image" alt="">
+            </div>
+        </div>
+
+
+        <!-- V example -->
+
+        <div class="card card--medium">
+
+            <div class="card__title"></div>
+
+            <div class="modal">
+
+                <div class="modal__head">
+                    <div class="modal__profile"> Profile <i class="fas fa-chevron-down modal__profile-icon"></i></div>
+                    <button type="button" class="modal__save">
+                        <div class="modal__save-inner">Save</div>
+                    </button>
+
+                </div>
+
+                <div class="modal__foot">
+
+                    <div class="modal__destination ">
+
+                        <div class="modal__mock-icon-container trim-text">
+                            <i class="fas fa-chevron-right modal__mock-icon"></i>
+
+                            <div class="modal__mock-text trim-text">Lorem ipsum dolor, sit amet consectetur adipisicing
+                                elit.</div>
+                        </div>
+                    </div>
+
+                    <div class="modal__social">
+
+                        <div class="modal__mock-icon-container">
+                            <i class="far fa-share-square card__mock-icon"></i>
+                        </div>
+
+
+                        <div class="modal__mock-icon-container">
+                            <i class="fas fa-ellipsis-h card__mock-icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card__image-container">
+                <img src="/dist/img/high image.jpg" class="card__image" alt="">
+            </div>
+        </div>
+
+        <!-- VI example -->
+
+        <div class="card card--large">
+
+            <div class="card__title"></div>
+
+
+            <div class="modal">
+
+                <div class="modal__head">
+                    <div class="modal__profile"> Profile <i class="fas fa-chevron-down modal__profile-icon"></i>
+                    </div>
+                    <button type="button" class="modal__save">
+                        <div class="modal__save-inner">Save</div>
+                    </button>
+
+                </div>
+
+                <div class="modal__foot">
+
+                    <div class="modal__destination ">
+
+                        <div class="modal__mock-icon-container trim-text">
+                            <i class="fas fa-chevron-right modal__mock-icon"></i>
+
+                            <div class="modal__mock-text trim-text">Lorem, ipsum.</div>
+                        </div>
+                    </div>
+
+                    <div class="modal__social">
+
+                        <div class="modal__mock-icon-container">
+                            <i class="far fa-share-square card__mock-icon"></i>
+                        </div>
+
+
+                        <div class="modal__mock-icon-container">
+                            <i class="fas fa-ellipsis-h card__mock-icon"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="card__image-container">
+                <img src="/dist/img/dizajn-uzkoj-prikhozhej_5db44a8dabd81.jpg" class="card__image" alt="">
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Modal to add -->
+
+    <main class="main">
+        <section class="main__wrapper container">
+
+            <div class="main__pin-nav">
+
+                <div class="main__create main__btn main__btn-active">Create a pin</div>
+                <div class="main__save main__btn">Save from website</div>
+
+            </div>
+        </section>
+
+        <section class="card-container">
+
+            <label for="picture"></label>
+
+            <section class="add">
+                <!-- header  -->
+                <div class="add__header">
+
+                    <div class="add__edit">
+                        <i class="fas fa-ellipsis-h add__ellipsis"></i>
+                    </div>
+
+                    <div class="add__board">
+
+                        <div class="add__select-board-container">
+                            <select class="add__select-board trim-text" id="pin_size" name="pin_size">
+                                <option value="Usefull Hacks">Usefull Hacks</option>
+                                <option value="Nature">Nature</option>
+                                <option value="Winter">Winter</option>
+                            </select>
+                            <i class="fas fa-chevron-down add__arrow-down"></i>
+                        </div>
+                        <!-- <div class="add__select-board"> </div> -->
+                        <button type="button" class="add__save">
+                            <div class="add__save-inner">Save</div>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="side__container">
+                    <!-- left side -->
+                    <section class="left-side" id="left_side">
+
+                        <label class="left-side__img-label" for="upload_img" id="upload_image_label">
+
+                            <div class="left-side__img-container">
+                                <div class="left-side__dotted-border" id="dotted_border">
+
+                                    <div class="left-side__mock-icon-container">
+                                        <i class="fas fa-arrow-alt-circle-up"></i>
+                                    </div>
+
+                                    <div class="left-side__upload-text">Drag and drop or click to upload</div>
+                                    <div class="left-side__recommend-size">Recommendation: Use high-quality .jpg
+                                        files
+                                        less
+                                        than
+                                        20MB</div>
+                                </div>
+                            </div>
+                            <input class="left-side__input" type="file" name="upload_img" id="upload_img">
+                        </label>
+
+                        <!-- Image container -->
+                        <div class="left-side__image-container">
+                            <div class="left-side__image-inner">
+                            </div>
+                        </div>
+
+                    </section>
+
+                    <!-- right side -->
+                    <div class="right-side" id="right_side">
+
+                        <section class="right-side__add-info">
+
+                            <input class="right-side__title" placeholder="Add your title" type="text" id="pin_title">
+
+
+                            <div class="right-side__user">
+                                <div class="right-side__user-circle">
+                                    <span>S</span>
+                                </div>
+                                <div class="right-side__user-name">
+                                    <span>Smith Andy</span>
+                                </div>
+                            </div>
+
+                            <input class="right-side__description" placeholder="Tell everyone what's your Pin about"
+                                type="text" id="pin_description">
+
+                            <button class="right-side__alt-text-container">
+                                <div class="right-side__alt-text">Add alt text</div>
+                            </button>
+                            <div class="right-side__destination-container">
+                                <input class="right-side__destination" placeholder="Add a destination link" type="text"
+                                    id="pin_destination">
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+            </section>
+
+
+        </section>
+
+    </main>
+
+    <section class="open">
+
+        <div class="open__wrapper">
+
+            <div class="open__back">
+                <i class="fas fa-arrow-left"></i>
+            </div>
+
+            <div class="open__card">
+
+                <div class="open__side-container">
+
+                    <div class="open__left-side">
+                        <div class="open__left-side-image-wrapper">
+                            <img class="open__left-side-image" src="/dist/img/high image.jpg" alt="">
+
+                            <div class="open__left-side-icon-container">
+                                <svg class="open__left-side-icon" height="" width="" viewBox="0 0 24 24"
+                                    aria-hidden="true" aria-label="" role="img">
+                                    <path
+                                        d="M19 1h-3v2h3c1.103 0 2 .897 2 2v3h2V5c0-2.206-1.794-4-4-4zm2 18c0 1.103-.897 2-2 2h-3v2h3c2.206 0 4-1.794 4-4v-3h-2zM3 19v-3H1v3c0 2.206 1.794 4 4 4h3v-2H5c-1.103 0-2-.897-2-2zM3 5c0-1.103.897-2 2-2h3V1H5C2.794 1 1 2.794 1 5v3h2zm6 6.5C9 10.122 10.122 9 11.5 9s2.5 1.122 2.5 2.5-1.122 2.5-2.5 2.5S9 12.878 9 11.5zm7.5 6.5a1.502 1.502 0 0 0 1.061-2.561l-2.012-2.011A4.444 4.444 0 0 0 16 11.5C16 9.019 13.981 7 11.5 7S7 9.019 7 11.5 9.019 16 11.5 16c.693 0 1.341-.17 1.928-.451l2.011 2.012c.293.293.677.439 1.061.439z">
+                                    </path>
+                                </svg>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="open__right-side">
+
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- JS -->
+    <script src="/dist/js/all.js"></script>
 </body>
 
 </html>

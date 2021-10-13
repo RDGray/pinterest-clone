@@ -1,5 +1,6 @@
 @use "../util" as *;
 html {
+  height: 100%;
   font-size: 100%;
   box-sizing: border-box;
   font: inherit;
@@ -15,8 +16,8 @@ html {
 }
 
 body {
-  height: 100vh;
-  overflow-y: scroll;
+  height: 100%;
+  //overflow-y: scroll;
   box-sizing: border-box;
   font-family: "Quicksand", sans-serif;
 }

@@ -6,13 +6,16 @@ document
     add_pin_modal.style.display = "block"; //
     add_pin_modal.style.opacity = 1;
     add_pin_modal.style.pointerEvents = "all";
+    add_pin_modal.scrollIntoView(true);
+    document.querySelector(".pin__container").style.display = "none";
   });
 
+//close modal on click
 document.querySelector(".main").addEventListener("click", (event) => {
   if (
     event.target === close_modal_click ||
     event.target === add_pin_modal ||
-    event.target === document
+    event.target === document.querySelector(".main__wrapper")
   ) {
     reset_modal();
   }
@@ -21,7 +24,8 @@ document.querySelector(".main").addEventListener("click", (event) => {
 // reset the content in the modal
 function reset_modal() {
   const modals_pin = document.querySelector(".left-side__image-container");
-
+  //
+  document.querySelector(".pin__container").style.display = "grid";
   document.querySelector("#upload_image_label").style.display = "block";
   modals_pin.style.display = "none";
   modals_pin.style.opacity = 0;
@@ -183,8 +187,6 @@ function create_pin(pin_details) {
     } else {
       new_pin.classList.add("card--small");
     }
-
-    console.log(new_image.height);
 
     if (
       new_image.getBoundingClientRect().width <

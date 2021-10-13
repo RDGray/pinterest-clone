@@ -3,14 +3,27 @@
 .main {
   background-color: hsl(0, 0%, 94%);
   width: 100%;
-  height: calc(100% - 80px);
-  position: relative;
-  top: 5rem;
+  height: calc(100% + 0.01px);
 
-  //padding-bottom: 10rem;
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  opacity: 0;
+  pointer-events: none;
+
+  transition: all 0.3s ease-in-out;
+  display: none;
+
+  @include breakpoint-down(small) {
+    top: 2rem;
+  }
+  @include breakpoint-down(medium) {
+    top: unset;
+  }
 
   &__wrapper {
-    padding: rem(40) 0;
+    padding: rem(20) 0;
     width: 100%;
     height: 100%;
   }
@@ -80,6 +93,21 @@
 
   padding: rem(40) rem(40) 0;
 
+  @include breakpoint-down(premedium) {
+    width: rem(550); //
+    min-width: rem(550); //
+    height: rem(550); //
+
+    padding: rem(15) rem(15) 0;
+  }
+  @include breakpoint-down(small) {
+    width: rem(350); //
+    min-width: rem(350); //
+    height: 100%; //
+
+    padding: rem(15) rem(10) 0;
+  }
+
   // z-index: var(--z-modal);
 
   &__header {
@@ -130,6 +158,12 @@
     padding: 0px rem(10);
 
     border-radius: rem(8) 0px 0px rem(8);
+
+    @include breakpoint-down(premedium) {
+      width: rem(150);
+
+      padding: 0px rem(5);
+    }
   }
 
   &__arrow-down {
@@ -156,12 +190,21 @@
 
 .side__container {
   display: flex;
-
+  align-items: center;
   width: 100%;
-
   height: 100%;
 
   padding: 0 0 rem(40);
+
+  @include breakpoint-down(premedium) {
+    padding: 0 0 rem(30);
+  }
+  @include breakpoint-down(small) {
+    display: flex;
+    flex-direction: column;
+
+    padding: 0 0 rem(10);
+  }
 }
 .left-side {
   flex-shrink: 0;
@@ -174,6 +217,19 @@
 
   padding: 0 rem(20);
 
+  @include breakpoint-down(premedium) {
+    padding: 0 rem(15);
+  }
+
+  @include breakpoint-down(small) {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    min-height: rem(250);
+    padding: 0 rem(10);
+  }
+
   // background-color: blue;
 
   &__img-label {
@@ -182,6 +238,12 @@
     cursor: pointer;
     background-color: #efefef;
     border-radius: rem(8);
+
+    @include breakpoint-down(small) {
+      display: flex;
+      align-items: center;
+      min-height: rem(250);
+    }
   }
   &__input {
     width: 0;
@@ -192,6 +254,11 @@
     padding: rem(10);
     width: 100%;
     height: 100%;
+
+    @include breakpoint-down(small) {
+      padding: rem(5);
+      min-height: rem(250);
+    }
   }
 
   &__dotted-border {
@@ -208,6 +275,10 @@
     border-radius: rem(8);
 
     position: relative;
+
+    @include breakpoint-down(small) {
+      min-height: rem(250);
+    }
   }
 
   &__mock-icon-container {
@@ -215,10 +286,24 @@
     color: #767676;
     font-size: 2.1rem;
     padding: 1.5rem;
+
+    @include breakpoint-down(small) {
+      font-size: 1.5rem;
+      padding: 0.5rem;
+    }
   }
   &__upload-text {
     text-align: center;
     padding: 0 3rem;
+
+    @include breakpoint-down(premedium) {
+      padding: 0 1rem;
+    }
+
+    @include breakpoint-down(small) {
+      padding: 0 0.5rem;
+      font-size: var(--s-font-size);
+    }
   }
   &__recommend-size {
     text-align: center;
@@ -230,6 +315,8 @@
     color: #6c6c6c;
 
     padding: 0 1.1rem;
+    @include breakpoint-down(premedium) {
+    }
   }
   //uploaded image
   &__image-container {
@@ -276,6 +363,15 @@
 
   padding: 0 rem(20);
 
+  @include breakpoint-down(premedium) {
+    padding: 0 rem(15);
+  }
+
+  @include breakpoint-down(small) {
+    width: 100%;
+    padding: rem(20) rem(10);
+  }
+
   //background-color: red;
 
   &__add-info {
@@ -307,10 +403,28 @@
     color: gray;
     padding-bottom: 2rem;
     margin-top: rem(32);
+
+    @include breakpoint-down(premedium) {
+      height: rem(50);
+      padding-bottom: 1rem;
+      margin-top: rem(20);
+    }
+
+    @include breakpoint-down(small) {
+      height: rem(30);
+      padding-bottom: 0.5rem;
+      margin-top: rem(15);
+      font-size: var(--ml-font-size);
+      font-weight: 800;
+    }
   }
   &__user {
     display: flex;
     margin-top: 2rem;
+
+    @include breakpoint-down(small) {
+      margin-top: 1rem;
+    }
   }
   &__user-circle {
     display: flex;
@@ -338,6 +452,10 @@
     height: 2.5rem;
     margin-top: 1rem;
     font-size: var(--ml-font-size);
+
+    @include breakpoint-down(small) {
+      height: 2rem;
+    }
   }
   &__alt-text-container {
     margin-top: 1.5rem;
@@ -351,8 +469,13 @@
     border-radius: rem(24);
 
     cursor: pointer;
+
     &:hover {
       background-color: #e6e6e6;
+    }
+
+    @include breakpoint-down(small) {
+      margin-top: 0.9rem;
     }
   }
 
@@ -362,10 +485,18 @@
     padding: rem(8) rem(12);
 
     text-align: center;
+
+    @include breakpoint-down(small) {
+      padding: rem(5) rem(10);
+    }
   }
   &__destination-container {
     display: flex;
     height: 40%;
+
+    @include breakpoint-down(small) {
+      margin-top: 1rem;
+    }
   }
   &__destination {
     align-self: flex-end;
@@ -373,5 +504,9 @@
     font-size: var(--sm-font-size);
     color: #919090;
     margin-bottom: 0.5rem;
+
+    @include breakpoint-down(small) {
+      font-size: var(--ml-font-size);
+    }
   }
 }

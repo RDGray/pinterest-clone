@@ -7,7 +7,7 @@
     align-items: flex-end;
 
     min-height: rem(40);
-    min-width: rem(180);
+    min-width: rem(50);
 
     max-height: 90vh;
     max-width: max-content;
@@ -21,6 +21,11 @@
     z-index: var(--z-modal);
 
     transition: all 0.2s ease-in-out;
+
+    @include breakpoint-down(medium) {
+      bottom: 3rem;
+      right: 0.2rem;
+    }
   }
 
   &__image-btn {
@@ -45,6 +50,12 @@
     transition: all 0.2s ease-in-out;
 
     position: relative;
+
+    @include breakpoint-down(medium) {
+      width: rem(50);
+      height: rem(50);
+      font-size: 1.1rem;
+    }
 
     &:hover {
       background-color: hsl(0, 0%, 94.1%);

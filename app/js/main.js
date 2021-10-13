@@ -11,9 +11,11 @@ function toggleBotMenu() {
   }
 }
 
+//close nav bottom pin window on click
+
 document
   .querySelector(".add-pin__upload-pin-create")
-  .addEventListener("click", () => {
+  .addEventListener("click", (e) => {
     msg.classList.add("menuOff");
     msg.classList.remove("menuOn");
   });
@@ -29,5 +31,17 @@ account_button.addEventListener("click", () => {
   } else {
     account_menu.classList.remove("menuOn");
     account_menu.classList.add("menuOff");
+  }
+});
+//close account window/nav bottom pin if click outside
+
+window.addEventListener("mouseup", function (e) {
+  if (!account_menu.contains(e.target)) {
+    account_menu.classList.remove("menuOn");
+    account_menu.classList.add("menuOff");
+  }
+  if (!msg.contains(e.target)) {
+    msg.classList.add("menuOff");
+    msg.classList.remove("menuOn");
   }
 });
